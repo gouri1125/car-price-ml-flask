@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Price Prediction</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f8; }
+        .box {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+        }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🚗 Car Price Prediction</h2>
+
+    <form method="POST">
+        <input type="number" name="year" placeholder="Year" required>
+        <input type="number" step="0.01" name="present_price" placeholder="Present Price (Lakhs)" required>
+        <input type="number" name="kms_driven" placeholder="Kilometers Driven" required>
+
+        <select name="owner">
+            <option value="0">First Owner</option>
+            <option value="1">Second Owner</option>
+            <option value="2">Third Owner</option>
+        </select>
+
+        <select name="fuel">
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+        </select>
+
+        <select name="seller">
+            <option value="Dealer">Dealer</option>
+            <option value="Individual">Individual</option>
+        </select>
+
+        <select name="transmission">
+            <option value="Manual">Manual</option>
+            <option value="Automatic">Automatic</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction is not none %}
+        <h3 style="text-align:center;">
+            💰 Estimated Price: ₹ {{ prediction }} Lakhs
+        </h3>
+    {% endif %}
+</div>
+
+</body>
+</html>
