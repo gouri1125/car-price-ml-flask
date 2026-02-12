@@ -36,24 +36,6 @@ Hosting on PythonAnywhere
 
 The application allows users to enter car details via a web interface and instantly receive a predicted selling price.
 
-🛠️ Tech Stack
-
-Python 3
-
-Flask
-
-Scikit-learn
-
-Pandas
-
-NumPy
-
-HTML/CSS
-
-Pickle
-
-PythonAnywhere (Deployment)
-
 🚀 Installation & Setup
 
 Clone the Repository
